@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Us | Sports Central</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+
+    .navbar {
+      background-color: #1e1e2f;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #2575fc;
+    }
+
+    section.about {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    h2, h3 {
+      color: #1e1e2f;
+    }
+
+    /* Accordion (light interactivity) */
+    .accordion-header {
+      background-color: #f1f1f1;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 10px;
+      transition: background 0.3s;
+    }
+
+    .accordion-header:hover {
+      background-color: #e0e0e0;
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 15px;
+      transition: max-height 0.3s ease;
+    }
+
+    .accordion-content ul {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <h2 class="logo">Sports Central</h2>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </nav>
+
+  <section class="about">
+    <h2>About Sports Central</h2>
+
+    <p>
+      <strong>Sports Central</strong> is a sports information website developed using HTML and CSS.
+      The website is designed to provide clear and simple information about popular sports in an organized manner.
+    </p>
+
+    <p>
+      This platform includes sports such as Cricket, Hockey, and Football.
+      Each sport has its own dedicated page containing images and basic rules, helping users understand the fundamentals of the game.
+    </p>
+
+    <p>
+      Sports Central focuses on clean design, easy navigation, and a user-friendly layout.
+      The website serves as an educational project and helps beginners explore sports without complexity.
+    </p>
+
+    <!-- Accordion for Objectives -->
+    <div class="accordion">
+      <div class="accordion-header">Website Objectives</div>
+      <div class="accordion-content">
+        <ul>
+          <li>To provide basic knowledge about different sports</li>
+          <li>To help beginners learn sports rules</li>
+          <li>To demonstrate HTML and CSS skills</li>
+          <li>To create a structured sports website</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Simple accordion
+    const header = document.querySelector('.accordion-header');
+    const content = document.querySelector('.accordion-content');
+
+    header.addEventListener('click', () => {
+      if(content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  </script>
+
+</body>
+</html>
